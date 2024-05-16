@@ -10,9 +10,9 @@ namespace Lab5MyLib
     {
         public static int[,] Task1(int[,] P)
         {
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < P.GetLength(0); i++)
             {
-                for (int j = 0; j < 8; j++)
+                for (int j = 0; j < P.GetLength(1); j++)
                 {
                     if (P[i, j] == -2)
                     {
@@ -25,9 +25,9 @@ namespace Lab5MyLib
         public static int Task2(int[,] P)
         {
             int a = 0;
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < P.GetLength(0); i++)
             {
-                if (P[i, 7] < 0)
+                if (P[i, P.GetLength(0)] < 0)
                 {
                     a++;
                 }
