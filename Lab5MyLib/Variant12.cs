@@ -36,11 +36,11 @@ namespace Lab5MyLib
         }
         public static int[] Task3(int[,] P)
         {
-            int[] T = new int[8];
-            int k = 0;
-            for (int i = 0; i < 7; i++)
+            int[] T = new int[P.GetLength(0)];
+            for (int i = 0; i < P.GetLength(0); i++)
             {
-                for (int j = 0; j < 8; j++)
+                int k = 0;
+                for (int j = 0; j < P.GetLength(1); j++)
                 {
                     if (P[i, j] > 0)
                     {
@@ -53,22 +53,22 @@ namespace Lab5MyLib
         }
         public static int[] Task4(int[,] P)
         {
-            int min = 0;
-            for (int i = 0; i < 7; i++)
+            int Min = 0;
+            for (int i = 0; i < P.GetLength(0); i++)
             {
-                for (int j = 0; j < 8; j++)
+                for (int j = 0; j < P.GetLength(1); j++)
                 {
                     if (P[i, j] < 6)
                     {
-                        min++;
+                        Min++;
                     }
                 }
             }
-            int[] R = new int[min];
+            int[] R = new int[Min];
             int count = 0;
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < P.GetLength(0); i++)
             {
-                for (int j = 0; j < 8; j++)
+                for (int j = 0; j < P.GetLength(1); j++)
                 {
                     if (P[i, j] < 6)
                     {
